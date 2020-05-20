@@ -16,6 +16,7 @@ class TipsController < ApplicationController
 
   def update
     @tip.update(tip_params)
+    @tip.run_calculations
 
     render json: @tip
   end
