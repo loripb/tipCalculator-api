@@ -8,6 +8,7 @@ class TipsController < ApplicationController
 
   def create
     @tip = Tip.create(tip_params)
+    @tip.run_calculations
 
     render json: @tip
   end
